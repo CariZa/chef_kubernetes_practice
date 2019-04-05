@@ -47,9 +47,9 @@ This recipe handles more of the configuration of the leader node.
 Sets up:
 * cni - calico
 * stores some value to be used by minions to auto join the cluster:
-* * leader ip
-* * kubernetes crt value
-* * kubernetes join token
+  * leader ip
+  * kubernetes crt value
+  * kubernetes join token
 
 Connects to a chef databag, which allows the script to store the access tokens that the minions will use to "auto join" the cluster.
 
