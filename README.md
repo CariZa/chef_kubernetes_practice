@@ -13,16 +13,18 @@ Recipes:
 General apt update & upgrade & install.
 
 Installs:
-    - docker
-    - kubernetes
-    - kubeadm
-    - kubelet
-    - kubectl
+
+* docker
+* kubernetes
+* kubeadm
+* kubelet
+* kubectl
 
 Set up:
-    - new user "normal" to run commands without root access
-    - ssh access for normal user
-    - activates docker
+
+* new user "normal" to run commands without root access
+* ssh access for normal user
+* activates docker
 
 ## Kubernetes Init with CNI
 
@@ -43,11 +45,11 @@ Recipes:
 This recipe handles more of the configuration of the leader node.
 
 Sets up:
-    - cni - calico
-    - stores some value to be used by minions to auto join the cluster:
-        - leader ip
-        - kubernetes crt value
-        - kubernetes join token
+* cni - calico
+* stores some value to be used by minions to auto join the cluster:
+* * leader ip
+* * kubernetes crt value
+* * kubernetes join token
 
 Connects to a chef databag, which allows the script to store the access tokens that the minions will use to "auto join" the cluster.
 
@@ -64,6 +66,6 @@ Recipes:
 Connects with the chef data bag, pulls in the values it needs to join the cluster.
 
 Handles:
-- runs kubeadm join, current node to cluster as a minion
-- moves config to "normal" user profile (not really needed anymore, was using this to do some testing on the nodes)
+* runs kubeadm join, current node to cluster as a minion
+* moves config to "normal" user profile (not really needed anymore, was using this to do some testing on the nodes)
 
