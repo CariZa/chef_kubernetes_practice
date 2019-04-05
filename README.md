@@ -1,4 +1,4 @@
-# Chef code fore Terraform
+# Chef code for Terraform
 
 ## Files
 
